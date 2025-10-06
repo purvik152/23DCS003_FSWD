@@ -1,0 +1,35 @@
+body {
+  background: #151922;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Remove default App styles */
+.App {
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+/* CalculatorApp styles are handled inline, but you can add overrides here if needed */
+
+button:active {
+  filter: brightness(0.9);
+}
+
+button:focus {
+  outline: 2px solid #e84a7a;
+  outline-offset: 2px;
+}
