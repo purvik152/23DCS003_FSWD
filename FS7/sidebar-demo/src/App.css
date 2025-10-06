@@ -1,0 +1,115 @@
+.app-container {
+  position: relative;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.hamburger {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+  background: #b39ddb;
+  border: none;
+  border-radius: 6px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.hamburger-icon {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -220px;
+  width: 220px;
+  height: 100%;
+  background: #b39ddb;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+  padding-top: 70px;
+  transition: left 0.3s cubic-bezier(.4,0,.2,1);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar nav ul li button {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sidebar nav ul li button:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.08);
+  z-index: 999;
+}
+
+.main-content {
+  margin-left: 0;
+  padding: 80px 30px 30px 30px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: margin-left 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+@media (min-width: 700px) {
+  .main-content {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+.main-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #222;
+  text-align: center;
+}
+
+.main-content p {
+  font-size: 1.1rem;
+  color: #444;
+  text-align: center;
+}
